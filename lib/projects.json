@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Lab 3",
+        "year": "2025",
+        "image": "../images/lab3.jpeg",
+        "description": "Lab 3 dsc106"
+    },
+    {
+        "title": "Project 1",
+        "year": "2025",
+        "image": "../images/proj1.jpeg",
+        "description": "Project 1 dsc106"
+    },
+    {
+        "title": "EDA workshop",
+        "year": "2024",
+        "image": "../images/eda.jpeg",
+        "description": "EDA workshop presentation"
+    },
+    {
+        "title": "dsc80 project",
+        "year": "2024",
+        "image": "../images/food.jpg",
+        "description": "DSC80 project recipes"
+    },
+    {
+        "title": "solved world hunger",
+        "year": "2023",
+        "image": "../images/food.jpg",
+        "description": "ended world hunger"
+    },
+    {
+        "title": "ended wage gap",
+        "year": "2023",
+        "image": "../images/wage_gap.jpg",
+        "description": "eliminated gender based wage gap"
+    },
+    {
+        "title": "cured cancer",
+        "year": "2022",
+        "image": "../images/cancer.jpg",
+        "description": "cured all cancers"
+    },
+    {
+        "title": "solved homelessness",
+        "year": "2022",
+        "image": "../images/homelessnes.jpeg",
+        "description": "ended homelessness"
+    },
+    {
+        "title": "wrote a series of feminist literature",
+        "year": "2022",
+        "image": "../images/fem_lit.jpg",
+        "description": "wrote a series of 4 books"
+    },
+    {
+        "title": "charity",
+        "year": "2021",
+        "image": "../images/charity.jpeg",
+        "description": "donated 10k to every charity in existence"
+    },
+    {
+        "title": "world peace",
+        "year": "2020",
+        "image": "../images/peace.jpg",
+        "description": "ended all wars"
+    },
+    {
+        "title": "cured covid",
+        "year": "2021",
+        "image": "../images/covidpic.jpg",
+        "description": "ended covid-19"
+    }
+]

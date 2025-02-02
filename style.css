@@ -1,0 +1,185 @@
+body {
+    display: block;
+    max-width: 100ch;
+    margin: 8px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+    padding-top: 3rem;
+}
+
+:root {
+    --color-accent: oklch(65% 50% 0);
+}
+
+html {
+    color-scheme: light dark;
+    accent-color: var(--color-accent)
+}
+
+nav {
+    /* position: fixed; */
+    margin: 0 auto;
+    top: 0;
+    width: 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom: 1rem;
+    --border-color: oklch(50% 10% 200 / 40%);
+    border-bottom: 1px solid var(--border-color); /*solid oklch(80% 3% 200); */
+    /* z-index: 1000; */
+    
+}
+
+nav ul{
+    display: contents;
+}
+nav li{
+    display: contents;
+}
+
+nav a{
+    flex:1;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    padding: 0.5em;
+}
+
+nav a.current{
+    border-bottom: 0.4em solid oklch(80% 3% 200);
+    padding-bottom: 0.1em;
+}
+
+nav a:hover{
+    border-bottom: 0.4em solid var(--color-accent);
+    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+    /* background-color: oklch(from var(--color-accent) 95% 5% h) */
+}
+
+/* form label,
+form input,
+form textarea,
+form button{
+    display: block;
+    width:100%;
+    margin-top: 0em;
+    unicode-bidi: isolate;
+    font: inherit;
+    box-sizing: border-box;
+    
+}
+form label {
+    margin-block: 0.5em;
+} */
+
+form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1em;
+}
+form label {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1/-1;
+}
+form button{
+    grid-column: 1/-1;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    
+}
+.projects article {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    gap: 1em;
+}
+.projects h2 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 400%;
+}
+h2 {
+    font-size: 200%;
+}
+h1, h2, h3, h4, h5, h6{
+    line-height: 1.1;
+    text-wrap: balance;
+    margin: 0.5em 0;
+}
+
+header h1 {
+    color: #222;
+}
+section h2 {
+    color: #444;
+    border-bottom: 0.1em solid oklch(80% 3% 200)
+    
+}
+article h3 {
+    color: #333;
+    margin: 0.5em;
+}
+article time {
+    color: #666;
+    margin: 1em;
+}
+article ul {
+    margin: 1em;
+}
+article p {
+    margin: 1em;
+}
+
+.color-scheme{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 80%;
+    font-family: inherit;
+}
+
+.color-scheme select {
+    font-family: inherit;
+}
+
+
+.github-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    text-align: center;
+    gap: 1rem; /* Adjust spacing between columns */
+    max-width: 800px; /* Adjust for layout */
+    margin: auto; /* Center horizontally */
+}
+
+.github-stats dt {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #6b7280; /* Slightly muted color for labels */
+    grid-row: 1; /* Forces dt to be in the first row */
+}
+
+.github-stats dd {
+    font-size: 2rem; /* Larger text for numbers */
+    font-weight: bold;
+    margin: 0;
+    grid-row: 2; /* Forces dd to be in the second row */
+}
+
+.projects img {
+    max-width: 100%;  /* Makes sure the image never overflows */
+    height: auto;     /* Keeps the aspect ratio */
+    display: block;   /* Removes extra space below images */
+    margin: 0 auto;   /* Centers the image */
+    max-height: 300px; /* Limits height to avoid huge images */
+    object-fit: cover; /* Crops instead of stretching */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
