@@ -183,3 +183,94 @@ article p {
     object-fit: cover; /* Crops instead of stretching */
     border-radius: 10px; /* Optional: Adds rounded corners */
 }
+
+.project-year {
+    font-family: Baskerville, serif; /* System font */
+    font-size: 0.9rem;
+    font-variant-numeric: oldstyle-nums; /* Gives numbers a more natural text-like look */
+    color: gray; /* Makes year appear subtly */
+    margin-top: 0.5rem;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.container {
+    display: flex;         /* Enables horizontal layout */
+    align-items: center;   /* Aligns elements vertically */
+    gap: 1rem;             /* Adds spacing between chart & legend */
+    max-width: 100%;       /* Ensures it adapts to screen width */
+    margin: 1rem auto;     
+    flex-wrap: wrap;   
+}
+
+
+#projects-plot {
+    flex: 0 1 auto;     
+    /* width: 150px;          
+    height: 150px;   */
+    max-width: 20em;
+    height: auto;   
+    margin-block: 2em;
+    overflow: visible;
+
+  }
+
+.legend {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+    max-width: 400px;
+    margin: 1rem auto;
+
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.legend-item .swatch {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--color);
+    display: inline-block;
+}
+
+path {
+    transition: 300ms;
+}
+
+&:has(path:hover) {
+    path:not(:hover) {
+      opacity: 0.5;
+    }
+  }
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+}
+.selected:is(path) {
+    fill: var(--color);
+}
+
+.selected:is(li) {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Make wedges clickable */
+path {
+  cursor: pointer;
+}
