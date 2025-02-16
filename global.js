@@ -11,14 +11,27 @@ function $$(selector, context = document) {
 // );
 // currentLink?.classList.add('current');
 
+// Detect GitHub Pages deployment
+let basePath = window.location.hostname.includes("github.io") ? "/portfolio4/" : "/";
+
 let pages = [
-    {url: '', title: 'Home'},
-    {url: 'projects/', title: 'Projects'},
-    {url: 'contact/', title: 'Contact'},
-    {url: 'cv/', title: 'CV'},
-    {url: 'https://github.com/syw003', title: 'Profile'},
-    {url: 'meta/', title: 'Meta' }
+    {url: basePath, title: 'Home'},
+    {url: basePath + 'projects/', title: 'Projects'},
+    {url: basePath + 'contact/', title: 'Contact'},
+    {url: basePath + 'cv/', title: 'CV'},
+    {url: 'https://github.com/syw003', title: 'Profile'}, // External links remain unchanged
+    {url: basePath + 'meta/', title: 'Meta'}
 ];
+
+
+// let pages = [
+//     {url: '', title: 'Home'},
+//     {url: 'projects/', title: 'Projects'},
+//     {url: 'contact/', title: 'Contact'},
+//     {url: 'cv/', title: 'CV'},
+//     {url: 'https://github.com/syw003', title: 'Profile'},
+//     {url: 'meta/', title: 'Meta' }
+// ];
 
 const ARE_WE_HOME = document.documentElement.classList.contains('home');
 
