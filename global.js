@@ -16,7 +16,8 @@ let pages = [
     {url: 'projects/', title: 'Projects'},
     {url: 'contact/', title: 'Contact'},
     {url: 'cv/', title: 'CV'},
-    {url: 'https://github.com/syw003', title: 'Profile'}
+    {url: 'https://github.com/syw003', title: 'Profile'},
+    {url: 'meta/', title: 'Meta' }
 ];
 
 const ARE_WE_HOME = document.documentElement.classList.contains('home');

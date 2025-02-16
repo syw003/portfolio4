@@ -2,12 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="../global.js" type="module"></script>
+    <script src="projects.js" type="module"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script defer src="main.js"></script> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Meta</title>
+
 </head>
 <body>
     <h1>Meta</h1>
-    <h2>this page includes stats about the code of this website</h2>
-    
+    <h3>This page includes stats about the code of this website</h3>
+    <div id="stats"></div>
+    <h2>Commits by time of day</h2>
+    <div id="chart"></div>
+
+    <dl id="commit-tooltip" class="info tooltip" hidden="true">
+        <dt>Commit</dt>
+        <dd>
+          <a href="" id="commit-link" target="_blank"></a>
+        </dd>
+      
+        <dt>Date</dt>
+        <dd id="commit-date"></dd>
+    </dl>
+      
+    <p id="selection-count">No commits selected</p>
+    <dl id="language-breakdown" class="stats"></dl>
+
 </body>
 </html>

@@ -274,3 +274,21 @@ path {
 path {
   cursor: pointer;
 }
+
+.stats {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.5em 1em;
+    margin-top: 1em;
+  }
+  
+.stats dt {
+    font-weight: bold;
+    text-align: left;
+  }
+  
+.stats dd {
+    margin: 0;
+    text-align: right;
+  }
+  
