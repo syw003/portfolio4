@@ -11,13 +11,21 @@ function $$(selector, context = document) {
 // );
 // currentLink?.classList.add('current');
 
+// let pages = [
+//   {url: '/', title: 'Home'},
+//   {url: '/projects/', title: 'Projects'},
+//   {url: '/contact/', title: 'Contact'},
+//   {url: '/cv/', title: 'CV'},
+//   {url: 'https://github.com/syw003', title: 'Profile'},
+//   {url: '/meta/', title: 'Meta'}
+// ];
 let pages = [
-  {url: '/', title: 'Home'},
-  {url: '/projects/', title: 'Projects'},
-  {url: '/contact/', title: 'Contact'},
-  {url: '/cv/', title: 'CV'},
+  {url: '/portfolio4/', title: 'Home'},
+  {url: '/portfolio4/projects/', title: 'Projects'},
+  {url: '/portfolio4/contact/', title: 'Contact'},
+  {url: '/portfolio4/cv/', title: 'CV'},
   {url: 'https://github.com/syw003', title: 'Profile'},
-  {url: '/meta/', title: 'Meta'}
+  {url: '/portfolio4/meta/', title: 'Meta'}
 ];
 
 
