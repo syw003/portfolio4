@@ -11,17 +11,19 @@ function $$(selector, context = document) {
 // );
 // currentLink?.classList.add('current');
 
-// Detect GitHub Pages deployment
-let basePath = window.location.hostname.includes("github.io") ? "/portfolio4/" : "/";
+// Automatically detect if hosted on GitHub Pages and adjust basePath
+let basePath = window.location.pathname.includes("/portfolio4/") ? "/portfolio4" : "";
 
+// Ensure no double slashes by handling slashes carefully
 let pages = [
-    {url: basePath, title: 'Home'},
-    {url: basePath + 'projects/', title: 'Projects'},
-    {url: basePath + 'contact/', title: 'Contact'},
-    {url: basePath + 'cv/', title: 'CV'},
-    {url: 'https://github.com/syw003', title: 'Profile'}, // External links remain unchanged
-    {url: basePath + 'meta/', title: 'Meta'}
+    {url: basePath + '/', title: 'Home'},
+    {url: basePath + '/projects/', title: 'Projects'},
+    {url: basePath + '/contact/', title: 'Contact'},
+    {url: basePath + '/cv/', title: 'CV'},
+    {url: 'https://github.com/syw003', title: 'Profile'}, // External link stays the same
+    {url: basePath + '/meta/', title: 'Meta'}
 ];
+
 
 
 // let pages = [
