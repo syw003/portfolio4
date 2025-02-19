@@ -11,16 +11,13 @@ function $$(selector, context = document) {
 // );
 // currentLink?.classList.add('current');
 
-// Set basePath only once (static for GitHub Pages)
-const basePath = '/portfolio4';
-
 let pages = [
-    {url: basePath + '/', title: 'Home'},
-    {url: basePath + '/projects/', title: 'Projects'},
-    {url: basePath + '/contact/', title: 'Contact'},
-    {url: basePath + '/cv/', title: 'CV'},
-    {url: 'https://github.com/syw003', title: 'Profile'}, // External link
-    {url: basePath + '/meta/', title: 'Meta'}
+  {url: '/', title: 'Home'},
+  {url: '/projects/', title: 'Projects'},
+  {url: '/contact/', title: 'Contact'},
+  {url: '/cv/', title: 'CV'},
+  {url: 'https://github.com/syw003', title: 'Profile'},
+  {url: '/meta/', title: 'Meta'}
 ];
 
 
