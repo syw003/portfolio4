@@ -37,7 +37,7 @@ let pages = [
     {url: prefix + 'portfolio4/contact/', title: 'Contact'},
     {url: prefix + 'portfolio4/cv/', title: 'CV'},
     {url: 'https://github.com/syw003', title: 'Profile'},
-    {url: prefix + 'portfolio4/meta/', title: 'Meta' }
+    {url: prefix + 'meta/', title: 'Meta' }
 ];
 
 const ARE_WE_HOME = document.documentElement.classList.contains('home');
