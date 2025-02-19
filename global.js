@@ -19,25 +19,25 @@ function $$(selector, context = document) {
 //   {url: 'https://github.com/syw003', title: 'Profile'},
 //   {url: '/meta/', title: 'Meta'}
 // ];
-// let pages = [
-//   {url: '/portfolio4/', title: 'Home'},
-//   {url: '/portfolio4/projects/', title: 'Projects'},
-//   {url: '/portfolio4/contact/', title: 'Contact'},
-//   {url: '/portfolio4/cv/', title: 'CV'},
-//   {url: 'https://github.com/syw003', title: 'Profile'},
-//   {url: '/portfolio4/meta/', title: 'Meta'}
-// ];
-
-
-
 let pages = [
-    {url: '', title: 'Home'},
-    {url: 'projects/', title: 'Projects'},
-    {url: 'contact/', title: 'Contact'},
-    {url: 'cv/', title: 'CV'},
-    {url: 'https://github.com/syw003', title: 'Profile'},
-    {url: 'meta/', title: 'Meta' }
+  {url: './portfolio4/', title: 'Home'},
+  {url: './portfolio4/projects/', title: 'Projects'},
+  {url: './portfolio4/contact/', title: 'Contact'},
+  {url: './portfolio4/cv/', title: 'CV'},
+  {url: 'https://github.com/syw003', title: 'Profile'},
+  {url: './portfolio4/meta/', title: 'Meta'}
 ];
+
+
+
+// let pages = [
+//     {url: '', title: 'Home'},
+//     {url: 'projects/', title: 'Projects'},
+//     {url: 'contact/', title: 'Contact'},
+//     {url: 'cv/', title: 'CV'},
+//     {url: 'https://github.com/syw003', title: 'Profile'},
+//     {url: 'meta/', title: 'Meta' }
+// ];
 
 const ARE_WE_HOME = document.documentElement.classList.contains('home');
 
@@ -61,13 +61,13 @@ for (let p of pages) {
     nav.append(a);
 
 
-//     a.classList.toggle(
-//         'current',
-//         a.host === location.host && a.pathname === location.pathname
-//       );
-//     a.toggleAttribute("target", a.host!==location.host);
+    a.classList.toggle(
+        'current',
+        a.host === location.host && a.pathname === location.pathname
+      );
+    a.toggleAttribute("target", a.host!==location.host);
 
-//     a.target = a.host !== location.host? "_blank" : "";
+    a.target = a.host !== location.host? "_blank" : "";
 
 }
 
