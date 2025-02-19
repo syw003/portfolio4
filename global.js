@@ -32,12 +32,12 @@ const isSubfolder = location.pathname.includes('/projects/') || location.pathnam
 const prefix = isSubfolder ? '../' : './';
 
 let pages = [
-    {url: '', title: 'Home'},
-    {url: prefix + 'projects/', title: 'Projects'},
-    {url: prefix + 'contact/', title: 'Contact'},
-    {url: prefix + 'cv/', title: 'CV'},
+    {url: prefix + '', title: 'Home'},
+    {url: prefix + 'portfolio4/projects/', title: 'Projects'},
+    {url: prefix + 'portfolio4/contact/', title: 'Contact'},
+    {url: prefix + 'portfolio4/cv/', title: 'CV'},
     {url: 'https://github.com/syw003', title: 'Profile'},
-    {url: prefix + 'meta/', title: 'Meta' }
+    {url: prefix + 'portfolio4/meta/', title: 'Meta' }
 ];
 
 const ARE_WE_HOME = document.documentElement.classList.contains('home');
@@ -49,7 +49,7 @@ document.body.prepend(nav);
 for (let p of pages) {
     let url = p.url;
     let title = p.title;
-    // console.log(p)
+    console.log(p)
     url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url: url;
     // console.log(url)
     
