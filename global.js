@@ -11,16 +11,15 @@ function $$(selector, context = document) {
 // );
 // currentLink?.classList.add('current');
 
-// Automatically detect if hosted on GitHub Pages and adjust basePath
-let basePath = window.location.pathname.includes("/portfolio4/") ? "/portfolio4" : "";
+// Set basePath only once (static for GitHub Pages)
+const basePath = '/portfolio4';
 
-// Ensure no double slashes by handling slashes carefully
 let pages = [
     {url: basePath + '/', title: 'Home'},
     {url: basePath + '/projects/', title: 'Projects'},
     {url: basePath + '/contact/', title: 'Contact'},
     {url: basePath + '/cv/', title: 'CV'},
-    {url: 'https://github.com/syw003', title: 'Profile'}, // External link stays the same
+    {url: 'https://github.com/syw003', title: 'Profile'}, // External link
     {url: basePath + '/meta/', title: 'Meta'}
 ];
 
