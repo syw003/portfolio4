@@ -186,20 +186,21 @@ function updateSelectionCount() {
   }
 
 
-function isCommitSelected(commit) {
-    if (!brushSelection) return false;
-  
-    // Get brush selection bounds
-    const min = { x: brushSelection[0][0], y: brushSelection[0][1] };
-    const max = { x: brushSelection[1][0], y: brushSelection[1][1] };
-  
-    // Get commit's X and Y position
-    let x = xScale(commit.date);
-    let y = yScale(commit.hourFrac);
-  
-    // Return true if commit is inside selection bounds
-    return x >= min.x && x <= max.x && y >= min.y && y <= max.y;
-  }
+function isCommitSelected(commit) { 
+  if (!brushSelection) return false; 
+  const min = { x: brushSelection[0][0], y: brushSelection[0][1] }; 
+  const max = { x: brushSelection[1][0], y: brushSelection[1][1] }; 
+
+  let x = xScale(commit.date); 
+  let y = yScale(commit.hourFrac); 
+
+  return x >= min.x && x <= max.x && y >= min.y && y <= max.y;
+}
+
+function updateSelection() {
+// Update visual state of dots based on selection
+d3.selectAll('circle').classed('selected', (d) => isCommitSelected(d));
+}
   
 
 function updateSelection() {

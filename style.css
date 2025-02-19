@@ -292,3 +292,77 @@ path {
     text-align: right;
   }
   
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+circle.selected {
+    fill: #ff6b6b;
+  }
+
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Subtle elevation */
+  backdrop-filter: blur(8px); /* Frosted glass effect */
+  font-size: 14px;
+  display: none; /* Hide by default */
+  pointer-events: none; /* Prevent interfering with hover */
+  z-index: 1000;
+}
+
+.tooltip dt {
+  font-weight: bold;
+  font-size: 13px;
+  color: #555;
+}
+
+.tooltip dd {
+  margin: 0;
+  font-size: 14px;
+  color: #222;
+}
+
+
+dl.info {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    padding: 8px 12px;
+    border-radius: 6px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Subtle elevation */
+    backdrop-filter: blur(8px); /* Frosted glass effect */
+    font-size: 14px;
+    transition-duration: 500ms;
+    transition-property: opacity, visibility;
+  }
+  
+dl.info[hidden]:not(:hover, :focus-within) {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  @keyframes marching-ants {
+    to {
+      stroke-dashoffset: -8; /* 5 + 3 */
+    }
+  }
+  
+.selection {
+    fill-opacity: 0.1;
+    stroke: black;
+    stroke-opacity: 0.7;
+    stroke-dasharray: 5 3;
+    animation: marching-ants 2s linear infinite;
+  }
+  
