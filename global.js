@@ -28,7 +28,7 @@ function $$(selector, context = document) {
 //   {url: './portfolio4/meta/', title: 'Meta'}
 // ];
 
-const isSubfolder = location.pathname.includes('/projects/') || location.pathname.includes('/contact/') || location.pathname.includes('/meta/');
+const isSubfolder = location.pathname.includes('/projects/') || location.pathname.includes('/contact/') || location.pathname.includes('/meta/') || location.pathname.includes('/cv');
 const prefix = isSubfolder ? '../' : './';
 
 let pages = [
