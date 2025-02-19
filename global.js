@@ -32,12 +32,12 @@ const isSubfolder = location.pathname.includes('/projects/') || location.pathnam
 const prefix = isSubfolder ? '../' : './';
 
 let pages = [
-    {url: prefix + '', title: 'Home'},
+    {url: prefix + 'portfolio4/', title: 'Home'},
     {url: prefix + 'portfolio4/projects/', title: 'Projects'},
     {url: prefix + 'portfolio4/contact/', title: 'Contact'},
     {url: prefix + 'portfolio4/cv/', title: 'CV'},
     {url: 'https://github.com/syw003', title: 'Profile'},
-    {url: prefix + 'meta/', title: 'Meta' }
+    {url: prefix + 'porfolio4/meta/', title: 'Meta' }
 ];
 
 const ARE_WE_HOME = document.documentElement.classList.contains('home');
