@@ -19,25 +19,26 @@ function $$(selector, context = document) {
 //   {url: 'https://github.com/syw003', title: 'Profile'},
 //   {url: '/meta/', title: 'Meta'}
 // ];
-let pages = [
-  {url: './portfolio4/', title: 'Home'},
-  {url: './portfolio4/projects/', title: 'Projects'},
-  {url: './portfolio4/contact/', title: 'Contact'},
-  {url: './portfolio4/cv/', title: 'CV'},
-  {url: 'https://github.com/syw003', title: 'Profile'},
-  {url: './portfolio4/meta/', title: 'Meta'}
-];
-
-
-
 // let pages = [
-//     {url: '', title: 'Home'},
-//     {url: 'projects/', title: 'Projects'},
-//     {url: 'contact/', title: 'Contact'},
-//     {url: 'cv/', title: 'CV'},
-//     {url: 'https://github.com/syw003', title: 'Profile'},
-//     {url: 'meta/', title: 'Meta' }
+//   {url: './portfolio4/', title: 'Home'},
+//   {url: './portfolio4/projects/', title: 'Projects'},
+//   {url: './portfolio4/contact/', title: 'Contact'},
+//   {url: './portfolio4/cv/', title: 'CV'},
+//   {url: 'https://github.com/syw003', title: 'Profile'},
+//   {url: './portfolio4/meta/', title: 'Meta'}
 // ];
+
+const isSubfolder = location.pathname.includes('/projects/') || location.pathname.includes('/contact/') || location.pathname.includes('/meta/');
+const prefix = isSubfolder ? '../' : './';
+
+let pages = [
+    {url: '', title: 'Home'},
+    {url: prefix + 'projects/', title: 'Projects'},
+    {url: prefix + 'contact/', title: 'Contact'},
+    {url: prefix + 'cv/', title: 'CV'},
+    {url: 'https://github.com/syw003', title: 'Profile'},
+    {url: prefix + 'meta/', title: 'Meta' }
+];
 
 const ARE_WE_HOME = document.documentElement.classList.contains('home');
 
