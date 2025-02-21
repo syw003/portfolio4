@@ -4,29 +4,6 @@ function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
-// let navLinks = $$("nav a");
-
-// let currentLink = navLinks.find(
-//     (a) => a.host === location.host && a.pathname === location.pathnane
-// );
-// currentLink?.classList.add('current');
-
-// let pages = [
-//   {url: '/', title: 'Home'},
-//   {url: '/projects/', title: 'Projects'},
-//   {url: '/contact/', title: 'Contact'},
-//   {url: '/cv/', title: 'CV'},
-//   {url: 'https://github.com/syw003', title: 'Profile'},
-//   {url: '/meta/', title: 'Meta'}
-// ];
-// let pages = [
-//   {url: './portfolio4/', title: 'Home'},
-//   {url: './portfolio4/projects/', title: 'Projects'},
-//   {url: './portfolio4/contact/', title: 'Contact'},
-//   {url: './portfolio4/cv/', title: 'CV'},
-//   {url: 'https://github.com/syw003', title: 'Profile'},
-//   {url: './portfolio4/meta/', title: 'Meta'}
-// ];
 
 const isSubfolder = location.pathname.includes('/projects/') || location.pathname.includes('/contact/') || location.pathname.includes('/meta/') || location.pathname.includes('/cv/');
 const prefix = isSubfolder ? '../' : './';
@@ -39,6 +16,16 @@ let pages = [
     {url: 'https://github.com/syw003', title: 'Profile'},
     {url: prefix + 'portfolio4/meta/', title: 'Meta' }
 ];
+
+// local
+// let pages = [
+//   {url: prefix + '', title: 'Home'},
+//   {url: prefix + 'projects/', title: 'Projects'},
+//   {url: prefix + 'contact/', title: 'Contact'},
+//   {url: prefix + 'cv/', title: 'CV'},
+//   {url: 'https://github.com/syw003', title: 'Profile'},
+//   {url: prefix + 'meta/', title: 'Meta' }
+// ];
 
 const ARE_WE_HOME = document.documentElement.classList.contains('home');
 
