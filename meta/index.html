@@ -10,26 +10,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meta</title>
 
+
 </head>
 <body>
     <h1>Meta</h1>
     <h3>This page includes stats about the code of this website</h3>
     <div id="stats"></div>
     <h2>Commits by time of day</h2>
-    <div id="chart"></div>
+
+
+    <div id="scrollytelling">
+        <div id="scroll-container">
+            <div id="spacer"></div>
+            <div id="items-container">
+                
+            </div>
+              
+        </div>
+    
+
+        
+        <!-- our old scatterplot div -->
+        <div id="chart"></div>
+    </div>
+    <div id="scrollytelling-files">
+        <div id="scroll-container-files">
+            <div id="spacer-files"></div>
+            <div id="items-container-files"></div>
+        </div>
+        <dl class="files"></dl>  <!-- The dots unit visualization -->
+    </div>
+
+    <div id="commit-filter">
+        <!-- <label>
+            <input type="range" id="commit-slider" min="0" max="100" value="100">
+        </label> -->
+
+    </div>
+    
+
+
+    
+    
 
     <dl id="commit-tooltip" class="info tooltip" hidden="true">
-        <dt>Commit</dt>
         <dd>
           <a href="" id="commit-link" target="_blank"></a>
         </dd>
-      
-        <dt>Date</dt>
-        <dd id="commit-date"></dd>
+        <dl>
+            <dt>COMMIT</dt> <dd id="commit-id"></dd>
+            <dt>DATE</dt> <dd id="commit-date"></dd>
+            <dt>TIME</dt> <dd id="commit-time"></dd>
+            <dt>AUTHOR</dt> <dd id="commit-author"></dd>
+            <dt>LINES EDITED</dt> <dd id="commit-lines"></dd>
+          </dl>
+
     </dl>
       
-    <p id="selection-count">No commits selected</p>
+    <!-- <p id="selection-count">No commits selected</p> -->
     <dl id="language-breakdown" class="stats"></dl>
+
+
+    <dl class="files">
+        <div>
+          <dt>
+            <code>{file.name}</code>
+          </dt>
+          <dd>
+            <div class="line"></div>
+          </dd>
+        </div>
+      </dl>
 
 </body>
 </html>

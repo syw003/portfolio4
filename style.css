@@ -296,7 +296,13 @@ circle {
   transition: 200ms;
   transform-origin: center;
   transform-box: fill-box;
+  transition: all 0.5s ease-out;
+  @starting-style {
+    r: 0; */
+  }
+
 }
+
 
 circle:hover {
   transform: scale(1.5);
@@ -371,3 +377,189 @@ dl.info[hidden]:not(:hover, :focus-within) {
 dl.stats {
     visibility: visible;
 }
+
+#commit-filter {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+#commit-filter label {
+    flex: 1;
+}
+
+#commit-time {
+    margin-left: auto;
+    font-weight: bold;
+}
+#commit-date-display {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 14px;
+}
+#commit-tooltip {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    z-index: 1000;
+  }
+  #commit-tooltip dl {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+  }
+  #commit-tooltip dt {
+    font-weight: bold;
+  }
+  
+
+.files {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 8px;
+}
+
+.files > div {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+.files dt {
+  grid-column: 1;
+  font-weight: bold;
+}
+
+.files dt small {
+  display: block;
+  font-size: 0.8em;
+  opacity: 0.6;
+}
+
+.files dd {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  align-content: start;
+  gap: 0.15em;
+  padding-top: 0.6em;
+  margin-left: 0;
+}
+
+/* Each line is now a small color-coded dot */
+.line {
+  display: flex;
+  width: 0.5em;
+  aspect-ratio: 1;
+  /* background:steelblue; */
+  border-radius: 50%;
+}
+
+
+
+#scrollytelling, 
+#scrollytelling-files {
+    position: relative;
+    grid-column: 1 / -1;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: subgrid;
+    padding-top: 0;
+  }
+  
+  /* feel free to play with this to make your scrolly more seemless with your plot */
+  #scroll-container {
+    grid-column: 1;
+    position: relative;
+    width: 95%;
+    height: 350px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    margin-bottom: 50px;
+  }
+  #scroll-container-files {
+    grid-column: 1;
+    position: relative;
+    width: 95%;
+    height: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    margin-bottom: 50px;
+    padding-top: 0;
+  }
+
+  
+  #chart {
+    grid-column: 2;
+    width: 100%; /* ✅ Allow it to fill the column */
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 800px; ✅ Make it bigger without overflowing */
+    flex-grow: 1; /* ✅ Let it take up extra space if available */
+  }
+  svg {
+    width: 100%;  /* Ensures the SVG fills the container */
+    height: 100%; /* Matches the container height */
+    overflow: visible;
+  }
+  #commits-section {
+    grid-template-columns: 1fr 3fr;  /* ✅ Gives more space to the scatterplot */
+  }
+  
+  
+  
+  #spacer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: none; /* transparent */
+    pointer-events: none;
+  }
+  
+  #items-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .item {
+    height: 150px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #eee;
+  }
+  
+  /* Make sure text is readable and does not overlap */
+  .item p {
+    margin: 5px 0 0 0;
+    line-height: 1.5;
+  }
+  
+  /* Smooth hover effect */
+  .item:hover {
+    transform: scale(1.02);
+  }
+  
+
+:global(body) {
+    max-width: min(120ch, 80vw);
+  }
+  
+  body {
+    max-width: min(140ch, 90vw);  /* ✅ Allows content to take up more width */
+    margin: 0 auto;  /* Centers content */
+    padding: 0 2vw;  /* ✅ Reduces padding on the sides */
+  }
+  
